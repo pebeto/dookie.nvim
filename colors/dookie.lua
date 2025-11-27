@@ -24,6 +24,7 @@ local colors = {
     almost_foreground = '#b7b19c',
     background = '#ffffea',
     dim_background = '#ffffca',
+    darker_background = '#eeee9e',
     cursor = "#98ce8f",
     error = '#b85c57',
     warning = '#8f7634',
@@ -39,13 +40,35 @@ hi('CursorLine', { bg = colors.dim_background })
 hi('CursorLineNr', { fg = colors.foreground, bg = colors.dim_background })
 hi('LineNr', { fg = colors.foreground, bg = colors.dim_background })
 hi('SignColumn', { bg = colors.dim_background })
-hi('Cursor', { bg = colors.cursor })
-hi('Visual', { bg = colors.dim_background })
 hi('Directory', { fg = colors.foreground, bold = true })
 hi('NonText', { fg = colors.foreground, bg = colors.background })
 hi('Title', { fg = colors.foreground, bold = true })
+hi('Visual', { bg = colors.darker_background })
+hi('Folded', { fg = colors.foreground, bg = colors.dim_background })
+hi('ColorColumn', { bg = colors.error })
+
+-- Cursor
+hi('Cursor', { bg = colors.cursor })
+hi('CursorColumn', { bg = colors.dim_background })
+hi('MatchParen', { fg = colors.foreground, bg = colors.darker_background, underline = true })
+
+-- Search
 hi('Search', { fg = colors.foreground, bg = colors.dim_background, bold = true })
+hi('CurSearch', { fg = colors.foreground, bg = colors.search_background, bold = true })
+
+-- Spell
+hi('SpellBad', { undercurl = true, sp = colors.error })
+hi('SpellCap', { undercurl = true, sp = colors.info })
+hi('SpellRare', { undercurl = true, sp = colors.hint })
+hi('SpellLocal', { undercurl = true, sp = colors.warning })
+
+-- Messages
 hi('ModeMsg', { fg = colors.foreground, bg = colors.background, bold = true })
+hi('MoreMsg', { fg = colors.foreground, bg = colors.background, bold = true })
+hi('ErrorMsg', { fg = colors.error, bg = colors.background, bold = true })
+hi('WarningMsg', { fg = colors.warning, bg = colors.background, bold = true })
+hi('InfoMsg', { fg = colors.info, bg = colors.background, bold = true })
+hi('Question', { fg = colors.foreground, bg = colors.background, bold = true })
 
 -- Completion menu
 hi('Pmenu', { fg = colors.foreground, bg = colors.dim_background })
@@ -113,7 +136,7 @@ hi('GitGutterDelete', { fg = colors.error })
 hi('GitSignsAdd', { fg = colors.info })
 hi('GitSignsChange', { fg = colors.warning })
 hi('GitSignsDelete', { fg = colors.error })
-hi('GitSignsCurrentLineBlame', { fg = colors.foreground, bg = colors.background, italic = true })
+hi('GitSignsCurrentLineBlame', { fg = colors.almost_foreground, bg = colors.background, italic = true })
 
 -- Winbar
 hi('WinBar', { fg = colors.foreground, bg = colors.background })
