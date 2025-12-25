@@ -157,3 +157,8 @@ hi('StatusLineSeparator', { fg = colors.foreground, bg = colors.dim_background }
 -- Copilot
 hi('CopilotSuggestion', { fg = colors.almost_foreground })
 hi('CopilotSuggestionSelected', { fg = colors.almost_foreground })
+
+-- Orgmode
+hi('@org.agenda.scheduled', { fg = colors.foreground })
+hi('@org.keyword.done', { fg = colors.background, bg = colors.info, bold = true })
+hi('@org.keyword.todo', { fg = colors.background, bg = colors.hint, bold = true })
