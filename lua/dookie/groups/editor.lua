@@ -27,12 +27,13 @@ function M.apply(hi, c)
 	hi("MsgArea", { fg = c.foreground, bg = c.background })
 	hi("MsgSeparator", { fg = c.foreground, bg = c.dim_background })
 
-	-- Cursor
-	hi("Cursor", { bg = c.cursor })
-	hi("lCursor", { bg = c.cursor })
-	hi("CursorIM", { bg = c.cursor })
-	hi("TermCursor", { bg = c.cursor })
-	hi("TermCursorNC", { bg = c.almost_foreground })
+	-- Cursor (block bg + inverted fg so the character under the cursor stays
+	-- visible; many terminals override the cursor color otherwise).
+	hi("Cursor", { fg = c.background, bg = c.cursor })
+	hi("lCursor", { fg = c.background, bg = c.cursor })
+	hi("CursorIM", { fg = c.background, bg = c.cursor })
+	hi("TermCursor", { fg = c.background, bg = c.cursor })
+	hi("TermCursorNC", { fg = c.background, bg = c.almost_foreground })
 	hi("CursorColumn", { bg = c.dim_background })
 	hi("MatchParen", { fg = c.foreground, bg = c.darker_background, underline = true })
 

@@ -16,7 +16,7 @@ M.default = {
 	border = "#8888cc", -- Acme column-divider blue
 
 	-- Personal-touch accents
-	cursor = "#98ce8f",
+	cursor = "#000000", -- cursor block bg; pair with fg=background for visible text
 	error = "#b85c57",
 	warning = "#8f7634",
 	info = "#57864e",
